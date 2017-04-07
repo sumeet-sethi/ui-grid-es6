@@ -1,0 +1,89 @@
+{
+	"message": "UI-Grid works with ES6!",
+	"teamList": [{
+			"team": "A",
+			"userList": [{
+					"userName": "Alpha",
+					"zoneList": [{
+							"zoneName": "North",
+							"zoneType": "Tactical",
+							"zoneExpiry": "4 Days",
+							"note": "Deploy tactical Unit"
+						}, {
+							"zoneName": "East",
+							"zoneType": "Scout",
+							"zoneExpiry": "6 Days",
+							"note": "Deploy Scout Unit"
+						}
+					]
+				}, {
+					"userName": "Tango",
+					"zoneList": [{
+							"zoneName": "North",
+							"zoneType": "Tactical",
+							"zoneExpiry": "14 Days",
+							"note": "Deploy tactical Unit"
+						}, {
+							"zoneName": "West",
+							"zoneType": "Tactical",
+							"zoneExpiry": "3 Days",
+							"note": "Deploy tactical Unit"
+						}, {
+							"zoneName": "South",
+							"zoneType": "Scout",
+							"zoneExpiry": "14 Days",
+							"note": "Deploy Scout Unit"
+						}, {
+							"zoneName": "East",
+							"zoneType": "Scout",
+							"zoneExpiry": "3 Days",
+							"note": "Deploy Scout Unit"
+						}
+					]
+				}
+			]
+		}, {
+			"team": "B",
+			"userList": [{
+					"userName": "Bravo",
+					"zoneList": [{
+							"zoneName": "North",
+							"zoneType": "Ghost",
+							"zoneExpiry": "14 Days",
+							"note": "Deploy Ghost Unit"
+						}, {
+							"zoneName": "East",
+							"zoneType": "Scout",
+							"zoneExpiry": "3 Days",
+							"note": "Deploy Scout Unit"
+						}
+					]
+				}, {
+					"userName": "Mike",
+					"zoneList": [{
+							"zoneName": "North",
+							"zoneType": "Scout",
+							"zoneExpiry": "10 Days",
+							"note": "Deploy Scout Unit"
+						}, {
+							"zoneName": "West",
+							"zoneType": "Tactical",
+							"zoneExpiry": "30 Days",
+							"note": "Deploy tactical Unit"
+						}, {
+							"zoneName": "South",
+							"zoneType": "Ghost",
+							"zoneExpiry": "14 Days",
+							"note": "Deploy Ghost Unit"
+						}, {
+							"zoneName": "East",
+							"zoneType": "Scout",
+							"zoneExpiry": "3 Days",
+							"note": "Deploy Scout Unit"
+						}
+					]
+				}
+			]
+		}
+	]
+}

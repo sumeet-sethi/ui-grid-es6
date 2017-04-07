@@ -1,0 +1,68 @@
+<div ng-cloak="">
+	<md-content class="md-padding" layout="row">
+		<div flex="" layout="column">
+			<form ng-submit="homeCtrl.bpAPI(true)" name="bpForm">
+				<md-card>
+					<md-toolbar class="md-accent md-hue-3">
+						<div class="md-toolbar-tools">
+							<h2 flex>
+								<span>User Team</span>
+							</h2>
+						</div>
+					</md-toolbar>
+					<md-card-title>
+						<md-card-title-text>
+							<dialog-component dialog="homeCtrl.dialogText"></dialog-component>
+						</md-card-title-text>
+					</md-card-title>
+					<div layout-gt-xs="row">
+						<div flex-gt-xs="50">
+							<md-card-title>
+								<md-card-title-text>
+									<span class="md-headline">Team A</span>
+								</md-card-title-text>
+							</md-card-title>
+							<md-card-content>
+								<div layout="column">
+									<md-input-container>
+										<label>User</label>
+										<input ng-model="homeCtrl.verifyUser.aTeam.user">
+									</md-input-container>
+								</div>
+							</md-card-content>
+						</div>
+						<div flex-gt-xs="50">
+							<md-card-title>
+								<md-card-title-text>
+									<span class="md-headline">Team B</span>
+								</md-card-title-text>
+							</md-card-title>
+							<md-card-content>
+								<div layout="column">
+									<md-input-container>
+										<label>User</label>
+										<input ng-model="homeCtrl.verifyUser.bTeam.user">
+									</md-input-container>
+								</div>
+							</md-card-content>
+						</div>
+					</div>
+					<md-card-actions layout="row" layout-align="end center">
+						<md-button class="md-primary" ng-click="homeCtrl.clearForm()">Clear</md-button>
+						<md-button type="submit" class="md-raised md-primary">Submit</md-button>
+					</md-card-actions>
+				</md-card>
+			</form>
+			<md-card>
+				<md-toolbar class="md-accent md-hue-3">
+					<div class="md-toolbar-tools">
+						<h2 flex>
+							<span>Making UI-Grid work with ES6 on an AngularJS app</span>
+						</h2>
+					</div>
+				</md-toolbar>
+				<user-table data="homeCtrl.userData"></user-table>
+			</md-card>
+		</div>
+	</md-content>
+</div>
