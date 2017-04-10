@@ -22,7 +22,7 @@ class UserTableController {
             enableHorizontalScrollbar: 0,
             enableSelectAll: true,
             minRowsToShow: 10,
-			exporterMenuPdf: false,
+            exporterMenuPdf: false,
             exporterCsvFilename: 'UserList.csv',
             onRegisterApi: (gridApi) => {
                 this.gridApi = gridApi;
@@ -30,7 +30,7 @@ class UserTableController {
                     this.gridApi.treeBase.expandAllRows();
                 });
             }
-        };
+        }; 
 
         this.$onInit = () => {
             this.prepareGridData(this.data.gridData);
@@ -38,7 +38,7 @@ class UserTableController {
 
         this.$onChanges = (changesObj) => {
             this.prepareGridData(changesObj.data.currentValue.gridData);
-			if (!_.isNull(this.gridApi)) {
+            if (!_.isNull(this.gridApi)) {
                 this.gridApi.core.notifyDataChange(this.uiGridConstants.dataChange.ALL);
             }
         };
