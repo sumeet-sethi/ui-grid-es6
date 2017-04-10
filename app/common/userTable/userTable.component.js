@@ -1,7 +1,8 @@
 class UserTableController {
-    constructor($scope) {
+    constructor($scope, uiGridConstants) {
         var vm = this;
         this.$scope = $scope;
+        this.uiGridConstants = uiGridConstants;
         vm.gridApi = null;
         vm.gridOptions = {
             columnDefs: [
@@ -21,6 +22,7 @@ class UserTableController {
             enableHorizontalScrollbar: 0,
             enableSelectAll: true,
             minRowsToShow: 10,
+			exporterMenuPdf: false,
             exporterCsvFilename: 'UserList.csv',
             onRegisterApi: (gridApi) => {
                 this.gridApi = gridApi;
@@ -36,6 +38,9 @@ class UserTableController {
 
         this.$onChanges = (changesObj) => {
             this.prepareGridData(changesObj.data.currentValue.gridData);
+			if (!_.isNull(this.gridApi)) {
+                this.gridApi.core.notifyDataChange(this.uiGridConstants.dataChange.ALL);
+            }
         };
 
         this.$onDestroy = () => {
@@ -77,7 +82,7 @@ class UserTableController {
     }
 }
 
-UserTableController.$inject = ['$scope'];
+UserTableController.$inject = ['$scope', 'uiGridConstants'];
 
 const userTableComponentConfig = {
     bindings: {
