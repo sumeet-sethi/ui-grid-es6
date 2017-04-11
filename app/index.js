@@ -16,12 +16,12 @@ import home from './home/home.module';
 import menu from './menu/menu.module';
 import secondScreen from './secondScreen/secondScreen.module';
 import BpService from './services/bpServices';
-import DialogComponent from './common/common.module';
+import CommonModule from './common/common.module';
 import './assets/styles/bp.css';
 
 export const bpuiModule = angular.module('bpui', [angularMaterial, angularAnimate, angularUIRouter, angularMessages, angularResource,
     uiGrid, 'ui.grid.treeView', 'ui.grid.pagination', 'ui.grid.resizeColumns', 'ui.grid.selection', 'ui.grid.expandable', 'ui.grid.exporter', 'ui.grid.autoResize',
-    menu, home, secondScreen, BpService, DialogComponent]);
+    menu, home, secondScreen, BpService, CommonModule]);
 bpuiModule.config(BpuiConfig);
 bpuiModule.controller('BpuiController', BpuiController);
 
